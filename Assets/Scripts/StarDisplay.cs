@@ -9,6 +9,8 @@ public class StarDisplay : MonoBehaviour {
 	private int stars = 50;
 	private Text starText;
 
+	public enum Status {SUCCESS, FAILURE};
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -25,5 +27,16 @@ public class StarDisplay : MonoBehaviour {
 	{
 		stars += amount;
 		UpdateDisplay();
+	}
+
+	public Status UseStars (int amount)
+	{
+		if (stars >= amount)
+		{
+			stars -= amount;
+			UpdateDisplay();
+			return Status.SUCCESS;
+		}
+		return Status.FAILURE;
 	}
 }

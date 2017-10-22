@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 95f7fbfbf52263c469126c8321714e02
+timeCreated: 1508647762
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: elf_head_shocked
+    21300002: elf_head
+    21300004: elf_head_pain
+    21300006: elf_right_arm
+    21300008: elf_body
+    21300010: elf_left_arm
+    21300012: elf_right_leg
+    21300014: elf_left_leg
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 500
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elf_head_shocked
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 316
+        width: 138
+        height: 164
+      alignment: 9
+      pivot: {x: 0.599895, y: 0.05029036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_head
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 316
+        width: 137
+        height: 164
+      alignment: 9
+      pivot: {x: 0.6056552, y: 0.05449323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_head_pain
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 326
+        width: 137
+        height: 163
+      alignment: 9
+      pivot: {x: 0.600624, y: 0.04753122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_right_arm
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 159
+        width: 44
+        height: 109
+      alignment: 9
+      pivot: {x: 0.8289719, y: 0.8920646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_body
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 164
+        width: 60
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_left_arm
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 173
+        width: 53
+        height: 104
+      alignment: 9
+      pivot: {x: 0.14886014, y: 0.8976587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_right_leg
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 28
+        width: 58
+        height: 113
+      alignment: 9
+      pivot: {x: 0.1672466, y: 0.8598869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elf_left_leg
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 28
+        width: 57
+        height: 113
+      alignment: 9
+      pivot: {x: 0.173501, y: 0.8903859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

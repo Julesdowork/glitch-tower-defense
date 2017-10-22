@@ -6,12 +6,10 @@ public class LawnMower : MonoBehaviour {
 
 	private bool activated;
 	private float speed = 2f;
-	private Rigidbody2D myRigidbody;
 
 	// Use this for initialization
 	void Start ()
 	{
-		myRigidbody = GetComponent<Rigidbody2D>();
 		activated = false;
 	}
 
