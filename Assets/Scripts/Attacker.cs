@@ -22,11 +22,28 @@ public class Attacker : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if (!currentTarget)
+			anim.SetBool("isAttacking", false);
 		transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);	
+	}
+
+	public void Attack (GameObject obj)
+	{
+		currentTarget = obj;
 	}
 
 	public void SetSpeed (float speed)
 	{
 		currentSpeed = speed;
+	}
+
+	public void StrikeCurrentTarget (float damage)
+	{
+		if (currentTarget)
+		{
+			Health health = currentTarget.GetComponent<Health>();
+			if (health)
+				health.DealDamage(damage);
+		}
 	}
 }
