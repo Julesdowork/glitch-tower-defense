@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-	public Camera mainCamera;
-	public Text countdown;
+	public GameObject countdown;
+	public GameObject canvas;
 
-	// Use this for initialization
-	void Start ()
+	public void StartCountdown()
 	{
-		countdown.gameObject.SetActive(false);
-		mainCamera.GetComponent<Animator>().SetTrigger("panTrigger");
-		countdown.gameObject.SetActive(true);
+		GameObject countdownPrefab = Instantiate(countdown);
+		countdown.transform.parent = canvas.transform;
 	}
 }

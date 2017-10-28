@@ -5,14 +5,20 @@ using UnityEngine.UI;
 
 public class CoreGame : MonoBehaviour {
 
-	private Text countdown;
+	private Animator cameraAnim;
 
-	// Use this for initialization
+	public GameObject countdown;
+	public Camera camera;
+
 	void Start ()
 	{
+		Debug.Log("In Start()");
+		cameraAnim = camera.GetComponent<Animator>();
+		cameraAnim.SetTrigger("panTrigger");
 	}
-	
-	void DisplayCountdown ()
+
+	public void StartCountdown()
 	{
+		GameObject countdownPrefab = Instantiate(countdown, this.transform);
 	}
 }

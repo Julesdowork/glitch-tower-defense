@@ -5,32 +5,35 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour {
 
+	private bool isRunning;
+	private float timer = 3;
 	private Text countdown;
-	private int timer = 5;
-	private float startTime;
 
 	// Use this for initialization
 	void Start ()
 	{
 		countdown = GetComponent<Text>();
-		countdown.text = "Start";
-		startTime = Time.timeSinceLevelLoad;
+		countdown.text = "";
+		isRunning = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		float currentTime = Time.timeSinceLevelLoad;
-		if ((currentTime - startTime) > timer)
-			Destroy(gameObject);
-		else if ((currentTime - startTime) > 3)
+		if (isRunning)
 		{
-			countdown.text = "Start";
+			timer -= Time.deltaTime;
+			countdown.text = ((int) timer + 1f).ToString();
+			if (timer <= 0.0f)
+			{
+				countdown.text = "Start";
+				Invoke("DestroyTimer", 2f);
+			}
 		}
-		else
-		{
-			int countTime = (int) (4 - (currentTime - startTime));
-			countdown.text = countTime.ToString();
-		}
+	}
+
+	void DestroyTimer ()
+	{
+		Destroy(gameObject);
 	}
 }
