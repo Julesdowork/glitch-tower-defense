@@ -14,7 +14,7 @@ public class GameTimer : MonoBehaviour {
 	private LevelManager levelManager;
 	private Slider slider;
 
-	public float levelSecs = 100;
+	public float levelSecs = 180;
 
 	// Use this for initialization
 	void Start ()
@@ -25,7 +25,6 @@ public class GameTimer : MonoBehaviour {
 		winLabel = GameObject.Find("Win Label");
 		winLabel.SetActive(false);
 		isRunning = false;
-		startTime = Time.time;
 	}
 	
 	// Update is called once per frame
