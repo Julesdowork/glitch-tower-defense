@@ -6,9 +6,9 @@ using UnityEngine.UI;
 [RequireComponent (typeof(Text))]
 public class StarDisplay : MonoBehaviour {
 
-	private int stars = 50;
 	private Text starText;
 
+	public int stars = 50;
 	public enum Status {SUCCESS, FAILURE};
 
 	// Use this for initialization

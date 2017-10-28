@@ -8,17 +8,32 @@ public class CoreGame : MonoBehaviour {
 	private Animator cameraAnim;
 
 	public GameObject countdown;
-	public Camera camera;
+	public GameObject starGeneratorPrefab;
+	public GameTimer timer;
+	public Camera gameCamera;
 
 	void Start ()
 	{
 		Debug.Log("In Start()");
-		cameraAnim = camera.GetComponent<Animator>();
+		cameraAnim = gameCamera.GetComponent<Animator>();
 		cameraAnim.SetTrigger("panTrigger");
+		Invoke("StartCountdown", 6f);
+		Invoke("StartGameTimer", 11f);
+		Invoke("StartFallingStars", 11f);
 	}
 
-	public void StartCountdown()
+	void StartCountdown ()
 	{
-		GameObject countdownPrefab = Instantiate(countdown, this.transform);
+		Instantiate(countdown, this.transform.parent);
+	}
+
+	void StartGameTimer ()
+	{
+		timer.StartTimer();
+	}
+
+	void StartFallingStars ()
+	{
+		Instantiate(starGeneratorPrefab, this.transform.parent);
 	}
 }

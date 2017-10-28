@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour {
 
+	private bool isRunning;
 	private bool levelOver = false;
+	private float startTime;
+	private float currentTime;
 	private AudioSource audioSource;
 	private GameObject winLabel;
 	private LevelManager levelManager;
@@ -21,14 +24,21 @@ public class GameTimer : MonoBehaviour {
 		levelManager = FindObjectOfType<LevelManager>();
 		winLabel = GameObject.Find("Win Label");
 		winLabel.SetActive(false);
+		isRunning = false;
+		startTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		slider.value = 1 - Time.timeSinceLevelLoad / levelSecs;
-		if (Time.timeSinceLevelLoad >= levelSecs && !levelOver)
-			HandleWinCondition();
+		if (isRunning)
+		{
+			currentTime = Time.time - startTime;
+			Debug.Log(currentTime);
+			slider.value = 1 - currentTime / levelSecs;
+			if (currentTime >= levelSecs && !levelOver)
+				HandleWinCondition();
+		}
 	}
 
 	// Destroys all objects with "Destroy on Win" tag
@@ -41,6 +51,7 @@ public class GameTimer : MonoBehaviour {
 
 	void HandleWinCondition ()
 	{
+		isRunning = false;
 		DestroyAllTaggedObjects();
 		audioSource.Play();
 		winLabel.SetActive(true);
@@ -51,5 +62,11 @@ public class GameTimer : MonoBehaviour {
 	void LoadNextLevel ()
 	{
 		levelManager.LoadNextLevel();
+	}
+
+	public void StartTimer ()
+	{
+		isRunning = true;
+		startTime = Time.time;
 	}
 }

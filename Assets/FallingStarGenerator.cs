@@ -16,5 +16,4 @@ public class FallingStarGenerator : MonoBehaviour {
 	{
 		Instantiate(fallingStar);
 	}
-
 }
