@@ -34,7 +34,6 @@ public class GameTimer : MonoBehaviour {
 		if (isRunning)
 		{
 			currentTime = Time.time - startTime;
-			Debug.Log(currentTime);
 			slider.value = 1 - currentTime / levelSecs;
 			if (currentTime >= levelSecs && !levelOver)
 				HandleWinCondition();

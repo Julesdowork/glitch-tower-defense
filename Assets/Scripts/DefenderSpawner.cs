@@ -28,6 +28,7 @@ public class DefenderSpawner : MonoBehaviour {
 			Vector2 roundedPos = SnapToGrid(rawPos);
 			SpawnDefender(roundedPos, defender);
 		}
+		TowerButton.selectedDefender = null;
 	}
 
 	Vector2 CalculateWorldPointOfMouseClick ()

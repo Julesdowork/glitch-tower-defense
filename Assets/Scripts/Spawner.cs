@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
+	private bool isActivated = false;
+
 	public GameObject[] attackerPrefabs;
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		foreach (GameObject thisAttacker in attackerPrefabs)
+		if (isActivated)
 		{
-			if (IsTimeToSpawn(thisAttacker))
-				Spawn(thisAttacker);
+			foreach (GameObject thisAttacker in attackerPrefabs)
+			{
+				if (IsTimeToSpawn(thisAttacker))
+					Spawn(thisAttacker);
+			}
 		}
+	}
+
+	public void Activate ()
+	{
+		isActivated = true;
 	}
 
 	bool IsTimeToSpawn (GameObject obj)
